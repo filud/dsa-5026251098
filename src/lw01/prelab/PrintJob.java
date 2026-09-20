@@ -1,5 +1,3 @@
-//package lw01.prelab;
-
 abstract public class PrintJob {
     
     private String id;
