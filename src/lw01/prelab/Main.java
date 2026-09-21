@@ -1,11 +1,11 @@
-import java.util.List;
+//import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main {
 
     public static void main(String[] args) {
-        List<PrintJob> jobs = new ArrayList<>();
+        ArrayList<PrintJob> jobs = new ArrayList<>();
         
         Scanner sc = new Scanner(main.class.getResourceAsStream("jobs.txt"));
         while (sc.hasNext()) {
