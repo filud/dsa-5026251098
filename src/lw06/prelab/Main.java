@@ -58,17 +58,21 @@ public class Main {
         Scanner sc = new Scanner(Main.class.getResourceAsStream("treenumbers.txt"));
 
         // Write your main code here
-        String[] numbers = sc.nextLine().trim().split(" ");
-        int target = Integer.parseInt(sc.nextLine().trim());
-        
+        String firstLine = sc.nextLine();
+        String[] numbers = firstLine.split(" ");
+
         Node root = null;
-        for(String n : numbers) {
-            root = insert(root, Integer.parseInt(n));
+
+        for(int i = 0; i < numbers.length; i++) {
+            int value = Integer.parseInt(numbers[i]);
+            root = insert(root, value);
         }
+
+        int target = sc.nextInt();
 
         System.out.print("Preorder  : ");
         preorder(root);
-        
+
         System.out.print("\nInorder   : ");
         inorder(root);
 
